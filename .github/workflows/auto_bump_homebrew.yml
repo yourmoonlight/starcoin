@@ -22,7 +22,7 @@ jobs:
         with:
           formula-name: starcoin
           formula-path: Formula/starcoin.rb
-          homebrew-tap: starcoinorg/homebrew-starcoin
+          homebrew-tap: yourmoonlight/homebrew-starcoin
           base-branch: master
           download-url: https://github.com/starcoinorg/starcoin/releases/download/${{ steps.extract-version.outputs.tag-name }}/starcoin-macos-latest.zip
           commit-message: |
