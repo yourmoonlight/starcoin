@@ -17,6 +17,9 @@ jobs:
         id: extract-version
         run: |
           printf "::set-output name=%s::%s\n" tag-name "${GITHUB_REF#refs/tags/}"
+      - name: test echo secrets COMMITTER_TOKEN
+        run: |
+          echo ${{ secrets.COMMITTER_TOKEN }}
       - uses: mislav/bump-homebrew-formula-action@v2
         if: "!contains(github.ref, '-')" # skip prereleases
         with:
