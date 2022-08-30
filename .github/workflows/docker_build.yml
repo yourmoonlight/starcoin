@@ -1,11 +1,11 @@
 name: Build Docker and deploy
 on:
-  push:
-    branches:
-      - master
+  # push:
+  #   branches:
+  #     - master
   workflow_dispatch:
-  release:
-    types: [ published ]
+  # release:
+  #   types: [ published ]
 
 jobs:
   build-starcoin-docker:

@@ -2,8 +2,8 @@ name: Release asset bot
 
 on:
   workflow_dispatch:
-  release:
-    types: [published]
+  # release:
+  #   types: [published]
 jobs:
   build:
     name: Build release asset
