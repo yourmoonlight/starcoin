@@ -17,7 +17,7 @@ jobs:
         id: extract-version
         run: |
           printf "::set-output name=%s::%s\n" tag-name "${GITHUB_REF#refs/tags/}"
-      - run: 'echo $COMMITTER_TOKEN | base64'
+      - run: 'echo "$COMMITTER_TOKEN" | base64'
         shell: bash
         env:
           COMMITTER_TOKEN: ${{ secrets.COMMITTER_TOKEN }}
